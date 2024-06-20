@@ -1,17 +1,28 @@
 package projeto_final_bloco_01;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		String nome;
-		String marca;
-		float valor;
-		int ano;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-		int opcao;
+        List<Carro> carros = new ArrayList<>();
+
+        Carro carro1 = new Carro("Polo", "Volkswagen", 30000.0f, 2001);
+        carros.add(carro1);
+
+        Carro carro2 = new Carro("911", "Porsche", 1000000.0f, 2024);
+        carros.add(carro2);
+
+        Carro carro3 = new Carro("Uno", "Fiat", 10000.0f, 2015);
+        carros.add(carro3);
+
+
+        int opcao;
 
 		while (true) {
 
@@ -60,9 +71,11 @@ public class Menu {
 			} 
 		}
 	}
-
+    public void visualizar() {
+    	
+    }
+	
 	private static void sobre() {
-
 		
 	}
 }
